@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item android:id="@+id/menu_kbd_hide"
+            android:title="@string/t_kbd_hide"
+            android:icon="@drawable/ic_kbd_hide"
+            app:showAsAction="ifRoom" />
+        <group>
+            <!--dummy item to get a nice separator-->
+            <item
+                android:title=""
+                app:showAsAction="always"
+                android:enabled="false" />
+        </group>
+        <item android:id="@+id/menu_clear"
+            android:title="@string/t_clear_cache"
+            android:icon="@drawable/ic_clear"
+            app:showAsAction="ifRoom" />
+        <item android:id="@+id/menu_prefs"
+            android:title="@string/t_settigs"
+            android:icon="@drawable/ic_menu"
+            app:showAsAction="ifRoom" />
+
+</menu>

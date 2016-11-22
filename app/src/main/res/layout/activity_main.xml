@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mrn.soft.translatehelper.MainActivity" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:background="@color/colorAccent"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lTopFromView"
+                android:layout_weight="0" >
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/mainfrom_text_width"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:ems="10"
+                    android:id="@+id/editTxtMainFrom"
+                    android:nestedScrollingEnabled="true"
+                    android:gravity="top|start"
+                    android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/btnMFTCopy"
+                            android:src="@drawable/ic_down"
+                            android:onClick="doClick" />
+                        </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lTopView"
+                android:layout_weight="0" >
+
+                <com.mrn.soft.translatehelper.MainEditText
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/main_text_width"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:ems="10"
+                    android:id="@+id/editTxtMain"
+                    android:nestedScrollingEnabled="true"
+                    android:gravity="top|start"
+                    android:hint="@string/ma_main_text_hint"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/btnMTRefresh"
+                            android:contentDescription="@string/t_refresh"
+                            android:src="@drawable/ic_refresh_empty"
+                            android:onClick="doClick"
+                            android:clickable="true" >
+                        </ImageButton>
+
+                        <ImageView
+                            android:src="@drawable/ic_refresh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/imgMTRefresh"
+                            android:onClick="doClick"
+                            android:clickable="true"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnMTCopy"
+                        android:src="@drawable/ic_content_copy"
+                        android:onClick="doClick" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnHint"
+                        android:src="@drawable/ic_hint_bl"
+                        android:onClick="doClick" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="0">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editTxtFrom"
+                    android:layout_weight="0.5"
+                    android:nestedScrollingEnabled="true"
+                    android:gravity="top|start"
+                    android:hint="@string/ma_from_text_hint" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0">
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dialog"
+                        android:entries="@array/tr_res_arrays"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/spinTrRes" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnTrRefresh"
+                        android:src="@drawable/ic_refresh"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:onClick="doClick" />
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editTxtTo"
+                    android:layout_weight="0.5"
+                    android:nestedScrollingEnabled="true"
+                    android:gravity="top|start" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnInsertInMT"
+                        android:src="@drawable/ic_up"
+                        android:onClick="doClick" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnCopy"
+                        android:src="@drawable/ic_content_copy"
+                        android:onClick="doClick" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lBottom"
+                android:clickable="true"
+                android:onClick="doClick" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lReverso">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/txtReversoPhrase"
+                        android:paddingBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtReversoTrs"
+                        android:paddingBottom="4dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listReversoExamples">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lGoogle"
+                    android:visibility="gone">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:id="@+id/lTranslate">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lHints"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hintsTop">
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:entries="@array/gb_prefs"
+                            android:id="@+id/spinGBPref"
+                            android:layout_gravity="center_vertical" />
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:entryValues="@array/gb_tags_values"
+                            android:entries="@array/gb_tags_names"
+                            android:id="@+id/spinGBTags"
+                            android:layout_gravity="center_vertical" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/btnInsertInFrom"
+                            android:src="@drawable/ic_up"
+                            android:onClick="doClick" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/listHints"></LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lLLeo"></LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lMicrosoft" ></LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lLoading"
+                    android:visibility="gone"
+                    android:layout_marginRight="48dp" >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imgLoader"
+                        android:src="@drawable/ic_loading"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="8dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

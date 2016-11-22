@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="topmainfrom"
+        android:title="@string/t_topmainfrom"
+        android:summary=""
+        android:defaultValue="false" >
+    </CheckBoxPreference>
+    <CheckBoxPreference
+        android:key="topmain"
+        android:title="@string/t_topmain"
+        android:summary=""
+        android:defaultValue="true" >
+    </CheckBoxPreference>
+    <ListPreference
+        android:key="fontsize"
+        android:title="@string/t_fontsize"
+        android:summary=""
+        android:entries="@array/fontsize_options"
+        android:entryValues="@array/fontsize_values"
+        android:dialogTitle="@string/t_select_fontsize"
+        android:defaultValue="@string/fontsize_default_value"
+        />
+</PreferenceScreen>

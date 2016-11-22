@@ -1,0 +1,99 @@
+<!DOCTYPE resources [<!ENTITY app_name "Translating helper">]>
+<resources>
+    <string name="app_name">&app_name;</string>
+    <string name="t_translate_text">Translate text</string>
+    <string name="t_translate_big_text">Translate big text</string>
+    <string name="ma_main_text_hint">Enter text here and press &quot;refresh&quot; in top right corner</string>
+    <string name="ma_from_text_hint">Enter a word or a text here and press next &quot;refresh&quot;</string>
+    <string name="t_refresh">Refresh</string>
+    <string name="t_loading">Loading</string>
+    <string name="t_settigs">Settings</string>
+    <string name="t_kbd_hide">Hide keyboard</string>
+    <string name="t_clear_cache">Clear cache</string>
+    <string name="t_topmainfrom">Show top From textbox</string>
+    <string name="t_topmain">Show top To textbox</string>
+    <string name="t_fontsize">Font size</string>
+    <string name="t_select_fontsize">Select font size</string>
+    <string name="t_hint">Hint</string>
+    <string name="t_q_clear_caption">Clear cache</string>
+    <string name="t_q_clear">Do you really want to clear cache?</string>
+    <string name="t_cache_was_cleared">Cache was cleared.\nRestart the app to see the result</string>
+    <string name="t_empty_input">You should enter text to translate</string>
+
+    <string-array name="tr_res_arrays">
+        <item>reverso</item>
+        <item>google</item>
+        <item>translate</item>
+        <item>ngrams</item>
+        <item>lingua leo</item>
+        <item>microsoft</item>
+    </string-array>
+
+    <string-array name="fontsize_options">
+        <item>12 sp</item>
+        <item>13 sp</item>
+        <item>14 sp</item>
+        <item>15 sp</item>
+        <item>16 sp</item>
+        <item>17 sp</item>
+        <item>18 sp</item>
+        <item>19 sp</item>
+        <item>20 sp</item>
+        <item>21 sp</item>
+        <item>22 sp</item>
+    </string-array>
+
+    <string-array name="fontsize_values">
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+    </string-array>
+
+    <string name="fontsize_default_value">16</string>
+
+    <string-array name="gb_tags_values">
+        <item>_NOUN</item>
+        <item>_VERB</item>
+        <item>_ADJ</item>
+        <item>_ADV</item>
+        <item>_PRON</item>
+        <item>_DET</item>
+        <item>_ADP</item>
+        <item>_NUM</item>
+        <item>_CONJ</item>
+        <item>_PRT</item>
+        <item>_ROOT</item>
+        <item>_START</item>
+        <item>_END</item>
+    </string-array>
+
+    <string-array name="gb_tags_names">
+        <item>noun</item>
+        <item>verb</item>
+        <item>adjective</item>
+        <item>adverb</item>
+        <item>pronoun</item>
+        <item>determiner or article</item>
+        <item>an adposition</item>
+        <item>numeral</item>
+        <item>conjunction</item>
+        <item>particle</item>
+        <item>root of the parse tree</item>
+        <item>start of a sentence</item>
+        <item>end of a sentence</item>
+    </string-array>
+
+    <string-array name="gb_prefs">
+        <item> </item>
+        <item>*</item>
+    </string-array>
+
+</resources>

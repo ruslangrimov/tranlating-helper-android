@@ -1,0 +1,21 @@
+<resources>
+    <string name="t_translate_text">Перевести текст</string>
+    <string name="t_translate_big_text">Перевести большой текст</string>
+    <string name="ma_main_text_hint">Ввведите сюда текст и нажмите &quot;Обновить&quot; в правом верхнем углу</string>
+    <string name="ma_from_text_hint">Введите сюда слово или текст и нажмите &quot;Обновить&quot;</string>
+    <string name="t_refresh">Обновить</string>
+    <string name="t_loading">Загрузка</string>
+    <string name="t_settigs">Настройки</string>
+    <string name="t_kbd_hide">Скрыть клавиатуру</string>
+    <string name="t_clear_cache">Очистить кеш</string>
+    <string name="t_topmainfrom">Показывать верхний From textbox</string>
+    <string name="t_topmain">Показывать верхний To textbox</string>
+    <string name="t_fontsize">Размер шрифта</string>
+    <string name="t_select_fontsize">Выберите размер шрифта</string>
+    <string name="t_hint">Подсказка</string>
+    <string name="t_q_clear_caption">Очистить кеш</string>
+    <string name="t_q_clear">Вы действительно хотите очистить кеш?</string>
+    <string name="t_cache_was_cleared">Кэш был очищен.\nПерезапустите приложение чтобы увидеть результаtranslatee</string>
+    <string name="t_empty_input">Вы должны ввести текст для перевода</string>
+</resources>
+
