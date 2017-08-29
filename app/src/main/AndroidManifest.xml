@@ -30,6 +30,13 @@
 
                 <action android:name="com.mrn.soft.translatehelper.intent.action.TranslateBigText" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="thelper.mrn.com" android:pathPrefix="/word/" />
+                <data android:scheme="https" android:host="thelper.mrn.com" android:pathPrefix="/word/" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".SettingsActivity"

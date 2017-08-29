@@ -330,6 +330,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         editTxtMainFrom.setSelection(editTxtMainFrom.getText().length());
                         findViewById(R.id.lTopFromView).setVisibility(View.VISIBLE);
                     }
+                } else if (action.equals(Intent.ACTION_VIEW)) {
+                    String[] segments = intent.getData().getPath().split("/");
+                    String sharedText = segments[segments.length - 1];
+                    if (sharedText != null) {
+                        fromIntent = true;
+                        editTxtFrom.setText(sharedText);
+                        editTxtFrom.setSelection(editTxtFrom.getText().length());
+                        findViewById(R.id.lTopView).setVisibility(View.GONE);
+                        findViewById(R.id.lTopFromView).setVisibility(View.GONE);
+                    }
                 }
             }
         }

@@ -22,14 +22,16 @@ public class ReversoData {
         }
 
         //Extract translations
-        pattern = Pattern.compile("<span class=\"entry\"[^>]*>(.*?)<\\/span>", Pattern.MULTILINE | Pattern.CASE_INSENSITIVE);
+        pattern = Pattern.compile("<em class='translation'>(.*?)<\\/em>", Pattern.MULTILINE | Pattern.CASE_INSENSITIVE);
         matcher = pattern.matcher(html);
         while (matcher.find()) {
             translations.add(matcher.group(1));
         }
 
         //Extract examples and their translations
-        pattern = Pattern.compile("<div class=\"text\"[^>]*>\\s*(.*?)\\s*<\\/div>", Pattern.MULTILINE | Pattern.CASE_INSENSITIVE);
+        //pattern = Pattern.compile("<span class=\"text\"[^>]*?>\\s*(.*?)\\s*<\\/div>", Pattern.MULTILINE | Pattern.CASE_INSENSITIVE);
+        pattern = Pattern.compile("<div class=\"[^\"]*ltr\">\\s*.*\\s*<span class=\"text\"[^>]*>\\s*(.*?)\\s*<\\/div>", Pattern.MULTILINE | Pattern.CASE_INSENSITIVE);
+
         matcher = pattern.matcher(html);
         while (matcher.find()) {
             String pFrom = remTags(matcher.group(1));
@@ -44,7 +46,9 @@ public class ReversoData {
     protected String remTags(String s) {
         Map<String, String> t = new LinkedHashMap<>();
         t.put("<\\/div>", "");
+        t.put("<\\/span>", "");
         t.put("<div class=\"text\">\\s*", "");
+        t.put("<span class=\"text\">\\s*", "");
         t.put("<\\/a>", "");
         t.put("<a[^>]*?>", "");
         t.put("<em>(.*?)<\\/em>", "<a href=\"$1\">$1</a>");
