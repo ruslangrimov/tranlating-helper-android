@@ -45,13 +45,13 @@ public class ReversoData {
 
     protected String remTags(String s) {
         Map<String, String> t = new LinkedHashMap<>();
-        t.put("<\\/div>", "");
-        t.put("<\\/span>", "");
-        t.put("<div class=\"text\">\\s*", "");
-        t.put("<span class=\"text\">\\s*", "");
+        t.put("\\s*<\\/div>", "");
+        t.put("\\s*<\\/span>", "");
+        t.put("<div[^>]*?>\\s*", "");
+        t.put("<span[^>]*?>\\s*", "");
         t.put("<\\/a>", "");
         t.put("<a[^>]*?>", "");
-        t.put("<em>(.*?)<\\/em>", "<a href=\"$1\">$1</a>");
+        t.put("<em[^>]*?>(.*?)<\\/em>", "<a href=\"$1\">$1</a>");
 
         for (Map.Entry<String, String> pair : t.entrySet()) {
             s = Pattern.compile(pair.getKey().toString(), Pattern.MULTILINE | Pattern.CASE_INSENSITIVE).
